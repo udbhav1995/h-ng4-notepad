@@ -6,10 +6,10 @@ const routes: Routes = [
       path:"",
       pathMatch:'full',
       redirectTo:'notes'
-    }
+    },
     {
         path: "**",
-        redirectTo:'notes' 
+        redirectTo:'notes'
     }];
 
 @NgModule({

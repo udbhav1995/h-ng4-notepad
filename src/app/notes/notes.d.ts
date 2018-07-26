@@ -1,5 +1,6 @@
 export class Notes {
   title?: String;
   content: String;
-  todo?: String;
+  id:number;
+  pic?: String;
 }

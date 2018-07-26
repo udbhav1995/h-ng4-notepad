@@ -1,25 +1,31 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TextNotesComponent } from './text-notes/text-notes.component';
+import { NoteDetailComponent } from './note-detail/note-detail.component';
 
 const routes: Routes = [
   {
     path:'notes',
     children:[
       {
-        path:'text',
-        component: TextNotesComponent
+        path:'text/:id',
+        component: NoteDetailComponent,
+        outlet:'detailsRoute'
       },
       {
         path:'text',
         component: TextNotesComponent
       },
       {
-        path:'text',
+        path:'photo',
         component: TextNotesComponent
       },
       {
-        path:'text',
+        path:'article',
+        component: TextNotesComponent
+      },
+      {
+        path:'doc',
         component: TextNotesComponent
       },
     ]
@@ -27,7 +33,7 @@ const routes: Routes = [
   {
     path:'',
     pathMatch:'full',
-    redirectTo:'notes'
+    redirectTo:'notes/text'
   }
 ];
 

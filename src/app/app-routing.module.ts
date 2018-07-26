@@ -5,11 +5,11 @@ const routes: Routes = [
     {
       path:"",
       pathMatch:'full',
-      redirectTo:'notes'
+      redirectTo:'notes/text'
     },
     {
         path: "**",
-        redirectTo:'notes'
+        redirectTo:'notes/text'
     }];
 
 @NgModule({

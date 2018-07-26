@@ -1,0 +1,27 @@
+<div class="container-fluid" *ngIf="notes.length>0">
+  <button class="btn btn-outline-secondary my-3" (click)="listview=!listview">Change View</button>
+
+  <div class="row">
+    <div [ngClass]="{'col-md-12':!openDetail,'col-md-8':openDetail}">
+      <ul class="list-group" *ngIf="listview">
+        <li class="list-group-item" *ngFor="let note of notes" (click)="openRoute(note)">
+          <div>
+            {{note.content}}
+          </div>
+        </li>
+      </ul>
+      <div *ngIf="!listview">
+        <div class="card" style="width: 18rem;" *ngFor="let note of notes" (click)="openRoute(note)">
+          <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+          <div class="card-body">
+            <h5 class="card-title" *ngIf="note.title">{{note.title}}</h5>
+            <p class="card-text">{{note.content}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div [ngClass]="{'col-md-4':openDetail,'hidden':!openDetail}">
+      <router-outlet name="detailsRoute"></router-outlet>
+    </div>
+  </div>
+</div>

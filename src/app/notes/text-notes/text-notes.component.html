@@ -1,3 +1,17 @@
-<p>
-  text-notes works!
-</p>
+<button type="button" class="btn btn-outline-primary btn-lg mt-3 ml-3"(click)="addNote=true">Add Note</button>
+<div class="container-fluid my-3" *ngIf="addNote">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="jumbotron">
+        <form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Note data</label>
+            <textarea class="form-control" formControlName="note" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!noteForm.valid">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<udb-note-iterator [notes]="notes" [type]="type"></udb-note-iterator> 

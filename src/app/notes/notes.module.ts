@@ -27,7 +27,8 @@ import { PictureNotesModule } from './picture-notes/picture-notes.module';
   exports:[
     FormsModule,
     ReactiveFormsModule,
-    NoteIteratorModule
+    NoteIteratorModule,
+    NotesRoutingModule
   ]
 })
 export class NotesModule { }

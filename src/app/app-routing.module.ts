@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { TextNotesComponent } from './notes/text-notes/text-notes.component';
 import { ArticleNotesComponent } from './notes/article-notes/article-notes.component';
 import { DocumentNotesComponent } from './notes/document-notes/document-notes.component';
@@ -12,27 +11,27 @@ const routes: Routes = [
     path:'notes',
     children:[
       {
-        path:'text/:id',
-        component: NoteDetailComponent,
-        outlet:'detailsRoute'
-      },
-      {
-        path:'text',
-        component: TextNotesComponent
-      },
-      {
-        path:'photo',
-        component: PictureNotesComponent
-      },
-      {
-        path:'article',
-        component: ArticleNotesComponent
-      },
-      {
-        path:'doc',
-        component: DocumentNotesComponent
-      },
-    ]
+      path:'text/:id',
+      component: NoteDetailComponent,
+      outlet:'detailsRoute'
+    },
+    {
+      path:'text',
+      component: TextNotesComponent
+    },
+    {
+      path:'photo',
+      component: PictureNotesComponent
+    },
+    {
+      path:'article',
+      component: ArticleNotesComponent
+    },
+    {
+      path:'doc',
+      component: DocumentNotesComponent
+    },
+  ]
   },
   {
       path:"",

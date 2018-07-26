@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { DocumentNotesComponent } from './document-notes.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { NoteIteratorModule } from '../note-iterator/note-iterator.module';
-// import { Ng4FilesModule } from 'angular4-files-upload/src/app/ng4-files';
 
 
 @NgModule({
@@ -11,8 +10,7 @@ import { NoteIteratorModule } from '../note-iterator/note-iterator.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NoteIteratorModule,
-    // Ng4FilesModule
+    NoteIteratorModule
   ],
   declarations: [DocumentNotesComponent],
   exports:[

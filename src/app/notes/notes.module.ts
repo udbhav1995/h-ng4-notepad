@@ -7,6 +7,7 @@ import { TextNotesModule } from './text-notes/text-notes.module';
 import { NoteIteratorModule } from './note-iterator/note-iterator.module';
 import { NoteDetailModule } from './note-detail/note-detail.module';
 import { ArticleNotesModule } from './article-notes/article-notes.module';
+import { DocumentNotesModule } from './document-notes/document-notes.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ArticleNotesModule } from './article-notes/article-notes.module';
     ReactiveFormsModule,
     NoteIteratorModule,
     NoteDetailModule,
-    ArticleNotesModule
+    ArticleNotesModule,
+    DocumentNotesModule
   ],
   declarations: [],
   exports:[

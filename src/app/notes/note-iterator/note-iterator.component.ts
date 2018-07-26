@@ -29,7 +29,7 @@ export class NoteIteratorComponent implements OnInit {
 
   openRoute(note:Notes){
     this.openDetail=true;
-    this.router.navigate(['/notes/'+this.type,this.type+'-'+note.id]);
+    this.router.navigateByUrl('/notes/'+this.type+'/'+this.type+'-'+note.id);
   }
 
 }

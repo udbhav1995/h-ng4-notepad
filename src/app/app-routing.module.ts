@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TextNotesComponent } from './notes/text-notes/text-notes.component';
 import { ArticleNotesComponent } from './notes/article-notes/article-notes.component';
 import { DocumentNotesComponent } from './notes/document-notes/document-notes.component';
+import { PictureNotesComponent } from './notes/picture-notes/picture-notes.component';
 import { NoteDetailComponent } from './notes/note-detail/note-detail.component';
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
       },
       {
         path:'photo',
-        component: TextNotesComponent
+        component: PictureNotesComponent
       },
       {
         path:'article',

@@ -9,39 +9,18 @@ import { NoteDetailComponent } from './notes/note-detail/note-detail.component';
 const routes: Routes = [
   {
     path:'notes',
-    children:[
-      {
-      path:'text/:id',
-      component: NoteDetailComponent,
-      outlet:'detailsRoute'
-    },
-    {
-      path:'text',
-      component: TextNotesComponent
-    },
-    {
-      path:'photo',
-      component: PictureNotesComponent
-    },
-    {
-      path:'article',
-      component: ArticleNotesComponent
-    },
-    {
-      path:'doc',
-      component: DocumentNotesComponent
-    },
-  ]
+    loadChildren:"./notes/notes.module#NotesModule"
   },
   {
-      path:"",
-      pathMatch:'full',
-      redirectTo:'notes/text'
-    },
-    {
-        path: "**",
-        redirectTo:'notes/text'
-    }];
+    path:"",
+    pathMatch:'full',
+    redirectTo:'notes'
+  },
+  {
+    path: "**",
+    redirectTo:'notes'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

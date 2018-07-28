@@ -1,12 +1,39 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TextNotesComponent } from './text-notes/text-notes.component';
-import { ArticleNotesComponent } from './article-notes/article-notes.component';
-import { DocumentNotesComponent } from './document-notes/document-notes.component';
-import { PictureNotesComponent } from './picture-notes/picture-notes.component';
 import { NoteDetailComponent } from './note-detail/note-detail.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  // {
+  //   path:'text/:id',
+  //   component: NoteDetailComponent,
+  //   outlet:'detailsRoute'
+  // },
+  {
+    path:'text',
+    loadChildren:"./text-notes/text-notes.module#TextNotesModule"
+  },
+  {
+    path:'photo',
+    loadChildren:"./picture-notes/picture-notes.module#PictureNotesModule"
+  },
+  {
+    path:'article',
+    loadChildren:"./article-notes/article-notes.module#ArticleNotesModule"
+  },
+  {
+    path:'doc',
+    loadChildren:"./document-notes/document-notes.module#DocumentNotesModule"
+  },
+  {
+    path:"",
+    pathMatch:'full',
+    redirectTo:'text'
+  },
+  {
+    path: "**",
+    redirectTo:'text'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

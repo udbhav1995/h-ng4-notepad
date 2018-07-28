@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TextNotesRoutingModule } from './text-notes-routing.module';
 import { TextNotesComponent } from './text-notes.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { NoteIteratorModule } from '../note-iterator/note-iterator.module';
@@ -9,12 +10,14 @@ import { NoteIteratorModule } from '../note-iterator/note-iterator.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NoteIteratorModule
+    NoteIteratorModule,
+    TextNotesRoutingModule
   ],
   declarations: [TextNotesComponent],
   exports:[
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TextNotesRoutingModule
   ]
 })
 export class TextNotesModule { }

@@ -5,10 +5,6 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { NotesRoutingModule } from './notes-routing.module';
 import { NoteIteratorModule } from './note-iterator/note-iterator.module';
 import { NoteDetailModule } from './note-detail/note-detail.module';
-// import { TextNotesModule } from './text-notes/text-notes.module';
-// import { ArticleNotesModule } from './article-notes/article-notes.module';
-// import { DocumentNotesModule } from './document-notes/document-notes.module';
-// import { PictureNotesModule } from './picture-notes/picture-notes.module';
 
 @NgModule({
   imports: [
@@ -17,11 +13,7 @@ import { NoteDetailModule } from './note-detail/note-detail.module';
     FormsModule,
     ReactiveFormsModule,
     NoteIteratorModule,
-    NoteDetailModule,
-    // TextNotesModule,
-    // ArticleNotesModule,
-    // DocumentNotesModule,
-    // PictureNotesModule
+    NoteDetailModule
   ],
   declarations: [],
   exports:[

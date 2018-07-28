@@ -11,8 +11,8 @@ import { Notes } from "../notes.d";
 export class PictureNotesComponent implements OnInit {
   addNote:boolean=false;
   title:any;
-  pic:string;
-  type:string='pic';
+  photo:string;
+  type:string='photo';
   note:string;
   notes:Notes[]=[];
   public selectedFiles;
@@ -29,7 +29,7 @@ export class PictureNotesComponent implements OnInit {
   }
 
   onSubmit(){
-    this.ns.addNote(this.type,{content:this.noteForm.value.note,pic:this.pic,title:this.noteForm.value.title,id:1});
+    this.ns.addNote(this.type,{content:this.noteForm.value.note,photo:this.photo,title:this.noteForm.value.title,id:1});
     this.addNote=false;
     this.getNotes();
   }
@@ -48,7 +48,7 @@ export class PictureNotesComponent implements OnInit {
   }
 
   _handleReaderLoaded(readerEvt) {
-    this.pic= readerEvt.target.result;
+    this.photo= readerEvt.target.result;
   }
 
   getNotes(){

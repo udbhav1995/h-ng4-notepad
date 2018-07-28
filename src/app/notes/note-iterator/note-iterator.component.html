@@ -9,7 +9,7 @@
             <h3 class="text-uppercase">{{note.title}}</h3>
           </div>
           <hr />
-          <img *ngIf="note.pic" class="card-img-top" [src]="note.pic" alt="Card image cap">
+          <img *ngIf="note.photo" class="card-img-top" [src]="note.photo" alt="Card image cap">
           <hr />
           <div *ngIf="note.fileType">File Type: {{note.fileType}}</div>
           <h4 *ngIf="note.file">File:</h4>
@@ -22,7 +22,7 @@
       </ul>
       <div class="d-flex align-items-center flex-wrap justify-content-around" *ngIf="!listview" >
         <div class="card d-inline-flex m-2" style="width: 18rem;" *ngFor="let note of notes" (click)="openRoute(note)">
-          <img *ngIf="note.pic" class="card-img-top" [src]="note.pic" alt="Card image cap">
+          <img *ngIf="note.photo" class="card-img-top" [src]="note.photo" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-uppercase" *ngIf="note.title">{{note.title}}</h5>
             <div *ngIf="note.fileType">File Type: {{note.fileType}}</div>

@@ -7,7 +7,7 @@ import { Notes } from "./notes.d";
 export class NotesService {
 
   textNotes:Notes[]=[];
-  picNotes:Notes[]=[];
+  photoNotes:Notes[]=[];
   docNotes:Notes[]=[];
   articleNotes:Notes[]=[];
 

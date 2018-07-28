@@ -3,11 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { NoteDetailComponent } from './note-detail/note-detail.component';
 
 const routes: Routes = [
-  // {
-  //   path:'text/:id',
-  //   component: NoteDetailComponent,
-  //   outlet:'detailsRoute'
-  // },
   {
     path:'text',
     loadChildren:"./text-notes/text-notes.module#TextNotesModule"
@@ -23,6 +18,11 @@ const routes: Routes = [
   {
     path:'doc',
     loadChildren:"./document-notes/document-notes.module#DocumentNotesModule"
+  },
+  {
+    path:'/:type/:id',
+    component: NoteDetailComponent,
+    outlet:'detailsRoute'
   },
   {
     path:"",

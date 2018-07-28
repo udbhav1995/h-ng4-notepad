@@ -4,5 +4,5 @@ export class Notes {
   id:number;
   file?:any;
   fileType?:string;
-  pic?: String;
+  photo?: String;
 }

@@ -20,11 +20,11 @@
           </div>
         </li>
       </ul>
-      <div *ngIf="!listview">
-        <div class="card" style="width: 18rem;" *ngFor="let note of notes" (click)="openRoute(note)">
+      <div class="d-flex align-items-center flex-wrap justify-content-around" *ngIf="!listview" >
+        <div class="card d-inline-flex m-2" style="width: 18rem;" *ngFor="let note of notes" (click)="openRoute(note)">
           <img *ngIf="note.pic" class="card-img-top" [src]="note.pic" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title" *ngIf="note.title">{{note.title}}</h5>
+            <h5 class="card-title text-uppercase" *ngIf="note.title">{{note.title}}</h5>
             <div *ngIf="note.fileType">File Type: {{note.fileType}}</div>
             <h4 *ngIf="note.file">File:</h4>
             <object *ngIf="note.file" [type]="note.fileType" [data]="note.file" width="250px" height="500px"></object>

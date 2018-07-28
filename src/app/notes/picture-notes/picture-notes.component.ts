@@ -56,6 +56,7 @@ export class PictureNotesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getNotes();
   }
 
 }

@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'udb-note-iterator',
   templateUrl: './note-iterator.component.html',
-  styleUrls: ['./note-iterator.component.css']
+  styleUrls: ['./note-iterator.component.scss']
 })
 export class NoteIteratorComponent implements OnInit {
 

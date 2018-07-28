@@ -36,6 +36,7 @@ export class TextNotesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getNotes();
   }
 
 }

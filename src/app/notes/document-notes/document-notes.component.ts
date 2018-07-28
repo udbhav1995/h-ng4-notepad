@@ -60,6 +60,7 @@ export class DocumentNotesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getNotes();
   }
 
 }
